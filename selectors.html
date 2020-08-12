@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/selectors.css">
+</head>
+
+<body>
+    <div class="container">
+        <form>
+            <fieldset>
+                <legend>Személyes adatok</legend>
+                <div>
+                    <label for="name">Név: *</label>
+                    <input id="name" name="name" type="text" required>
+                </div>
+                <div>
+                    <label for="email">Email cím: *</label>
+                    <input id="email" name="email" type="email" required>
+                </div>
+                <div>
+                    <label for="address">Cím: *</label>
+                    <input id="address" name="address" type="text" required>
+                </div>
+                <div">
+                    <label for="comment">Megjegyzés:</label>
+                    <textarea id="comment" name="comment" rows="5"></textarea>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Termék adatai:</legend>
+                <span>Extra feltét:</span>
+                <div>
+                    <input non-checked id="nothing" name="nothing" type="checkbox" value="0">
+                    <label for="nothing">Nem kérek</label>
+                </div>
+                <div>
+                    <input checked id="cheese" name="cheese" type="radio" value="300">
+                    <label for="cheese">Sajt</label>
+                </div>
+                <div>
+                    <input checked id="double-cheese" name="cheese" type="radio" value="600">
+                    <label for="double-cheese">Dupla sajt</label>
+                </div>
+                <div>
+                    <input non-checked id="double-meat" name="double-meat" type="checkbox" value="1000">
+                    <label for="double-meat">Dupla hús</label>
+                </div>
+                <div>
+                    <input non-checked id="hagyma" name="hagyma" type="checkbox" value="200">
+                    <label for="hagyma">Hagyma</label>
+                </div>
+                <div>
+                    <label for="sauce">Szósz</label>
+                    <select id="sauce" name="sauce">
+                        <option value="0" selected>szósz 1</option>
+                        <option value="100">szósz 2</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="quantity">Mennyiség</label>
+                    <input id="quantity" name="quantity" type="number" min="1" max="10">
+                </div>
+            </fieldset>
+                <div>
+                    <input type="button" value="Rendelés leadása"> Ár: <span>1200</span> Ft
+                </div>
+        </form>
+    </div>
+</body>
+</html>
