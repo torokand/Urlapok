@@ -21,6 +21,7 @@ name = "Varga Béla"
 
 console.log(name);
 
+// Konstansok hatóköre - scope-ja
 const NAMES = "Sanyi"
 // NAME = "Péter" // hibát ad
 function test() {
