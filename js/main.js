@@ -63,7 +63,7 @@ orderForm.addEventListener("submit", function(ev) {
     console.log( this );
     
     let inputs = this.querySelectorAll("input");
-    let values = {};
+    let values = {}; 
     for (let i=0; i < inputs.length; i++) {
         values[inputs[i].name] = inputs[i].value;
     }
@@ -71,6 +71,110 @@ orderForm.addEventListener("submit", function(ev) {
 });
 
 
-/*     */
+/* Megjegyzés jelölése,
+akár több soron keresztül is.    */
+
+// Parent elemek kezelése
+
+let alertCloseButtons = document.querySelectorAll(".close[data-dismiss='alert']")
+let alerCloseEventHandlerFunction = function(ev) {
+        this.parentElement.style.display = "none";
+};
+
+for (let i =0; i< alertCloseButtons.length; i++) {
+    alertCloseButtons[i].addEventListener("click", alerCloseEventHandlerFunction)
+//        console.log( this )
+    };
+
+// switch használata
+
+/* new Date();
+console.log(new Date());
+new Date(2020, 8, 28)
+console.log(new Date(2020, 8, 28)); // január = 0
+new Date().getDay();
+console.log(new Date().getDay()); // vasárnap = 0
+
+let weekDay = new Date().getDay();
+let dayName ="";
+// weekDay = 10; unknown kiiratásához
+switch(weekDay) {
+    case 0: dayName = "Vas"
+    break;
+    case 1: dayName = "Hét"
+    break;
+    case 2: dayName = "Ked"
+    break;
+    case 3: dayName = "Sze"
+    break;
+    case 4: dayName = "Csü"
+    break;
+    case 5: dayName = "Pén"
+    break;
+    case 6: dayName = "Szo"
+    break;
+    default: dayName = "unknown"
+}
+console.log(dayName);
+*/
+
+// A while ciklus
+/*
+let i = 0;
+while (i < 10) {
+    i++;
+    console.log(i);
+}
+*/
+
+// végtelen ciklus:
+/*
+i = 0;
+while (i < 10) {
+    console.log(i);
+}
+*/
+
+// kollekció bejárása
+/*
+let animal = { name: "Cat", age: 3};
+let keys = Object.keys(animal);
+i = 0;
+while(i < keys.length ) {
+    console.log(animal[keys[i]]);
+    i++;
+};
+*/
+
+// do while ciklus
+/*
+let i=10;
+do {
+    console.log(i);
+    i++;
+}
+while(i<0);
+*/
+
+//Select elem kitöltése.
+let toppings = [
+    "Szalonna",
+    "Hagyma",
+    "Tükörtojás",
+    "Libamáj",
+    "Extra sonka"
+];
+let toppingSelect = document.querySelector("#topInput");
+let index = 0;
+while(index < toppings.length) {
+    let option =document.createElement("option");
+    option.value = index;
+    option.innerHTML = toppings[index];
+    toppingSelect.appendChild(option);
+    index++;
+}
+
+
+
 
 
